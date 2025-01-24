@@ -27,7 +27,7 @@ function App() {
 
       // Send a POST request to the server with the payload
       const response = await axios.post(
-        `http://localhost:5000${endpoint}`,
+        `https://auth-backend-1-xnpw.onrender.com${endpoint}`,
         payload
       );
 
@@ -48,7 +48,7 @@ function App() {
   const fetchProtectedData = async () => {
     try {
       // Send a GET request with the token in the Authorization header
-      const response = await axios.get("http://localhost:5000/protected", {
+      const response = await axios.get("https://auth-backend-1-xnpw.onrender.com/protected", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
